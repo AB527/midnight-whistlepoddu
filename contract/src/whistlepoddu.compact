@@ -1,0 +1,62 @@
+pragma language_version >= 0.20;
+
+import CompactStandardLibrary;
+
+/**
+ * Direct wallet -> company hash mapping
+ */
+export ledger wallet_to_company: Map<Bytes<32>, Bytes<32>>;
+
+/**
+ * Plain text chats: [chat_content, company_name, timestamp]
+ */
+export ledger chats: [Field]<3>[];
+
+/**
+ * Step 1: Register company claim (takes company_name, stores hash)
+ */
+export circuit register_company_claim(company_name: Field, wallet_address: Bytes<32>): [] {
+    assert(wallet_to_company.get(wallet_address).is_none(), "Wallet already registered");
+    // Hash the company_name for privacy-preserving storage
+    const company_hash = poseidon_hash([company_name]);
+    wallet_to_company.insert(wallet_address, company_hash);
+}
+
+/**
+ * Step 2: Add plain-text whistleblower chat (simplified params)
+ */
+export circuit add_whistleblower_chat(
+    chat_content: Field,
+    company_name: Field,
+    timestamp: Field,
+    wallet_address: Bytes<32>
+): [] {
+    // Verify wallet owns this company by re-hashing company_name
+    const company_hash = poseidon_hash([company_name]);
+    const registered_company = wallet_to_company.get(wallet_address);
+    assert(registered_company.is_some(), "Wallet not registered");
+    assert(registered_company.unwrap() == company_hash, "Company mismatch");
+    
+    // Store readable chat
+    const chat_entry = [
+        chat_content,   // 0: Plain text content
+        company_name,   // 1: Company name (readable)
+        timestamp       // 2: Timestamp
+    ];
+    
+    chats.push(chat_entry);
+}
+
+/**
+ * Step 3: View ALL chats (public)
+ */
+export circuit view_all_chats(): [Field]<3>[] {
+    return chats;
+}
+
+/**
+ * Step 4: View COMPANY-SPECIFIC chats (client-side filtering)
+ */
+export circuit view_company_chats(company_hash: Bytes<32>): [Field]<3>[] {
+    return chats;  // Client filters by company_name matching hash
+}
