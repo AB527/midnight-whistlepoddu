@@ -1,5 +1,7 @@
 # Midnight Whistlepoddu
 
+https://github.com/user-attachments/assets/0b7b5e2c-cd48-434a-a751-be4703f16497
+
 A privacy-preserving corporate identity and anonymous chat platform built on the **Midnight blockchain**. This project allows users to verify their workplace via ID extraction (simulated) and subsequently generate Zero-Knowledge Proofs (ZKP) to attach a company name hash to their wallet. Once verified, users can participate in a global chat where their company affiliation is visible, but their personal identity remains completely hidden.
 
 ## Why This Matters
