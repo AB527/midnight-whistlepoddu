@@ -129,7 +129,7 @@ export default function App() {
     setIsProcessing(true);
     
     // SIMULATION MODE (no wallet connected)
-    if (true || !walletAddr || isMocked) {
+    if (!walletAddr || isMocked) {
       addLog('⚠️ Warning: Lace Wallet not connected. Using SIMULATION mode.');
       addLog('Simulation: Storing claim in localStorage (NOT on blockchain)...');
       

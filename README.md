@@ -42,7 +42,7 @@ The system utilizes Midnight's Zero-Knowledge capabilities to ensure personal da
 ### Current Deployed Contract
 
 The application is configured to interact with the following contract address on the local network:
-`20358cff6f29133c20060554794d1a662c33944fd3df47ebd993c9ec7c097350`
+`54926765ddd93d38f995cd3ad004cd7447e8898e8ecb27b9d759b72fba322bfa`
 
 ---
 
