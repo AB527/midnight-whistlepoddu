@@ -1,14 +1,44 @@
 {
   "circuits": [
     {
-      "name": "storeMessage",
+      "name": "register_company_claim",
       "pure": false,
       "arguments": [
         {
-          "name": "customMessage",
+          "name": "company_name",
           "type": {
-            "type-name": "Opaque",
-            "tsType": "string"
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "wallet_address",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "verify_company_claim",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "company_name",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "wallet_address",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
           }
         }
       ],

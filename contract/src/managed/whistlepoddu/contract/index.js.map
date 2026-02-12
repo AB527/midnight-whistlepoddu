@@ -2,7 +2,7 @@
   "version": 3,
   "file": "index.js",
   "sourceRoot": "../../../../",
-  "sources": ["src/whistlepoddu.compact"],
+  "sources": ["src/whistlepoddu.compact", "compiler/standard-library.compact"],
   "names": [],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;MAIA,AAAA,YAEC;;;;;cAF2B,eAA+B;;;;;;;;;;;yCAA/B,eAA+B;;;;;;;;;8CAA/B,eAA+B;;;OAE1D;;;GAAC;EANF;;;;;;;;;;;;;;;;;;;;;;;;;;IAEA;;;;;;;;;yEAAwC;;;;;;;GAItC;EAFF,AAAA,eAEC,4BAF2B,eAA+B;IACzD;;;;;;;2HAAmB,eAAa;;yEAAzB;;GACR;;;;;;;;;;;;;;;;IAJD;qCAAA;;;;;;;;;;;0GAAwC;KAAA;;;;;;;;;;"
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;MAMA,AAAA,sBAeC;;;;;cAdG,cAAmB;cACnB,gBAAyB;;;;;;;;;;;;;;;;;;;;;;;;;yCADzB,cAAmB,+BACnB,gBAAyB;;;;;;;;;wDADzB,cAAmB;wDACnB,gBAAyB;;;OAa5B;MAED,AAAA,oBAeC;;;;;cAdG,cAAmB;cACnB,gBAAyB;;;;;;;;;;;;;;;;;;;;;;;;;yCADzB,cAAmB,+BACnB,gBAAyB;;;;;;;;;sDADzB,cAAmB;sDACnB,gBAAyB;;;OAa5B;;;;;;GAAC;EAtCF;;;;;;;;;;;;;;;;;;;;;;;;;;;IAIA;;;;;;;;;;yEAA2D;;;;;;;GAkCzD;ECUF,AAAA,kBAAiC;oEAAA;;;ED1CjC,AAAA,yBAeC;;4BAdG,cAAmB;4BACnB,gBAAyB;;UAGnB,eAAwC,GAAf,gBAAc;qDAErC;;;;;;;;;;;4KAAyB,eAAa;;;;0HAArB;;UAEnB,cAA+D,0BAA1B,cAAY;IAGvD;;;;;;;;;;2HAAyB,eAAa;;;2HAAW,cAAY;;;wEAA5C;;GAGpB;EAED,AAAA,uBAeC;;0BAdG,cAAmB;0BACnB,gBAAyB;;UAEnB,eAAwC,GAAf,gBAAc;oDAEtC;;;;;;;;;;;2KAAyB,eAAa;;;;yHAArB;;UAElB,cAA+D,0BAA1B,cAAY;UACjD,iBAAyD,2BAAvC;;;;;;;;;;;;;;iJAAyB,eAAa;;;2HAArB;0CAGlC,iBAAe,EAAa,cAAY;;;GAGlD;;;;;;;;;;;;;;;;;;;;IAlCD;;;;;uCAAA;;;;;;;;;;;;;;;;4GAA2D;;;;;;uCAA3D;;;;;;;;;;;;4GAA2D;;;;;;;;;;;;;;uCAA3D;;;;;;;;;;;;;;;4GAA2D;;;;;;;;;;;;;;uCAA3D;;;;;;;;;;;;;;;;;4GAA2D;;;;;;;;;KAAA;;;;;;;;;;"
 }

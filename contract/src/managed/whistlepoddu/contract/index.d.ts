@@ -4,20 +4,34 @@ export type Witnesses<PS> = {
 }
 
 export type ImpureCircuits<PS> = {
-  storeMessage(context: __compactRuntime.CircuitContext<PS>,
-               customMessage_0: string): __compactRuntime.CircuitResults<PS, []>;
+  register_company_claim(context: __compactRuntime.CircuitContext<PS>,
+                         company_name_0: bigint,
+                         wallet_address_0: Uint8Array): __compactRuntime.CircuitResults<PS, []>;
+  verify_company_claim(context: __compactRuntime.CircuitContext<PS>,
+                       company_name_0: bigint,
+                       wallet_address_0: Uint8Array): __compactRuntime.CircuitResults<PS, []>;
 }
 
 export type PureCircuits = {
 }
 
 export type Circuits<PS> = {
-  storeMessage(context: __compactRuntime.CircuitContext<PS>,
-               customMessage_0: string): __compactRuntime.CircuitResults<PS, []>;
+  register_company_claim(context: __compactRuntime.CircuitContext<PS>,
+                         company_name_0: bigint,
+                         wallet_address_0: Uint8Array): __compactRuntime.CircuitResults<PS, []>;
+  verify_company_claim(context: __compactRuntime.CircuitContext<PS>,
+                       company_name_0: bigint,
+                       wallet_address_0: Uint8Array): __compactRuntime.CircuitResults<PS, []>;
 }
 
 export type Ledger = {
-  readonly message: string;
+  wallet_to_company: {
+    isEmpty(): boolean;
+    size(): bigint;
+    member(key_0: Uint8Array): boolean;
+    lookup(key_0: Uint8Array): Uint8Array;
+    [Symbol.iterator](): Iterator<[Uint8Array, Uint8Array]>
+  };
 }
 
 export type ContractReferenceLocations = any;
